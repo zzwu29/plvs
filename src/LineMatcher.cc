@@ -649,7 +649,7 @@ int LineMatcher::SearchForTriangulation(KeyFramePtr& pKF1, KeyFramePtr& pKF2, ve
         if(pML1) 
             continue;
         
-        // NOTE: With fisheye cameras, mvuRightLineStart and mvuRightLineEnd values cannot be directly used, however if >0 they signal the availability of the depths.  
+        // NOTE: With fisheye cameras, mvuRightLineStart and mvuRightLineEnd values cannot be directly used, however if > 0 they signal the availability of the depths.  
         const bool bStereo1 = (pKF1->mvuRightLineStart[idx1]>=0) && (pKF1->mvuRightLineEnd[idx1]>=0);
         vbStereo1[idx1] = bStereo1; 
 
